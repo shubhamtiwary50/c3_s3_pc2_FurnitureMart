@@ -7,6 +7,7 @@ public class FurnitureItem {
     private String colour;
     private String furnitureUsage;
     private double price;
+    static final double DISCOUNT = 5.0;
 
     public int getFurnitureCode() {
         return furnitureCode;
@@ -56,4 +57,22 @@ public class FurnitureItem {
         this.price = price;
     }
 
-}
+    FurnitureItem() {
+
+    }
+
+    public double calculateDiscount() {
+        double discountedPrice;
+        if (this.gradeOfFurniture.equals("grade1") && this.furnitureUsage.equals("outdoor"))
+        {
+            System.out.println(" Eligible for discount ");
+            return discountedPrice = (95.0 / 100.0) * this.price;
+        }
+        else {
+            System.out.println(" Not eligible for discount ");
+        }
+            return price;
+        }
+
+    }
+
